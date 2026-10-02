@@ -8,12 +8,44 @@ An enterprise-grade, permission-aware Retrieval-Augmented Generation (RAG) archi
 
 ---
 
-## 1. Executive Business Case & CPMAI Feasibility
+## 1. CPMAI Phase I: Matching AI to Business Needs
 
+Following the **PMI Certified Professional in Managing AI (CPMAI) Phase I (Business Understanding)** framework, this architecture was evaluated to ensure AI is applied as a targeted, high-value solution rather than a technology trend.
+
+### 1.1 Business Objective & ROI Feasibility
 * **Target Audience**: 500+ Internal Tier-1 Support Representatives.
-* **Problem**: Fragmented documentation increased support handle times and operational costs.
-* **Solution**: A permission-aware RAG engine combining BM25 keyword search with OpenSearch Serverless vector indexing and Claude 3.5 Sonnet synthesis.
-* **Financial Model**: CPMAI Phase I feasibility framework projects a **35% reduction in handle time** (~\$1.8M annual operational savings for a 500-agent tier-1 baseline).
+* **Problem Statement**: Enterprise support reps waste hundreds of hours searching across fragmented, siloed technical documentation, resulting in high average handle times (AHT) and rising operational support expenses.
+* **Projected Financial ROI**: A 35% reduction in support handle time yields an estimated **\$1.8M in annual operational savings** for a 500-agent tier-1 baseline, achieving full payback within 12 months.
+
+### 1.2 Cognitive vs. Non-Cognitive Justification
+* **Why AI is Required (Probabilistic Need)**: Customer support queries contain high variability, semantic vagueness, and natural language nuances. Traditional keyword search (deterministic) fails when terminology differs between user queries and documentation.
+* **Non-Cognitive Integration**: Deterministic automation handles standard authentication, API Gateway routing, and static user identity validation, reserving LLM probabilistic processing strictly for semantic context retrieval and natural language synthesis.
+
+### 1.3 AI Pattern Mapping
+* **Primary Pattern**: **Conversational and Human Interaction** (providing natural language Q&A grounded in enterprise documentation).
+* **Secondary Pattern**: **Predictive Analytics & Decision Support** (re-ranking candidate context chunks to present optimal decision paths for support agents).
+
+### 1.4 DIKUW Pyramid Alignment
+* **Data (Base Facts)**: Raw PDFs, policy manuals, and support logs stored in Amazon S3.
+* **Information (Organized Data)**: Document metadata, department ownership tags, and structured RBAC role attributes.
+* **Knowledge (The AI Sweet Spot)**: Vector embeddings generated via Amazon Titan Text v2 and stored in OpenSearch Serverless, enabling pattern recognition across semantic concepts.
+* **Understanding (Grounded Synthesis)**: Claude 3.5 Sonnet synthesizes precise, citation-backed support answers tailored to the user's permission scope.
+
+### 1.5 CPMAI Go/No-Go Assessment (3x3 Feasibility Matrix)
+
+| Feasibility Pillar | Assessment Criteria | Status | Strategic Justification |
+| :--- | :--- | :---: | :--- |
+| **Business Feasibility** | Problem Definition | 🟢 **GO** | Clear operational pain point with measurable \$1.8M AHT reduction target. |
+| | Sponsor Commitment | 🟢 **GO** | Support leadership committed to adoption without expanding agent headcount. |
+| | Sufficient ROI | 🟢 **GO** | High financial return with < 12-month payback period. |
+| **Data Feasibility** | Data Availability | 🟢 **GO** | Comprehensive internal technical documentation and FAQs exist in S3. |
+| | Access & Security | 🟢 **GO** | IT owns data repositories with authenticated IAM access. |
+| | Data Quality | 🟢 **GO** | Pre-processing and chunking pipelines clean and structure legacy PDFs. |
+| **Execution Feasibility** | Technology & Skills | 🟢 **GO** | AWS Bedrock and OpenSearch Serverless provide mature, managed infrastructure. |
+| | Implementation Timeline | 🟢 **GO** | Agile pilot deployment achievable in short 2-week iterations. |
+| | Operational Context | 🟢 **GO** | Embedded directly into support agent dashboard via REST API. |
+
+*Overall Assessment*: **ALL GREEN (GO)** — Project approved for technical implementation.
 
 ---
 
