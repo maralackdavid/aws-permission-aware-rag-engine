@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.venv
+venv/
+.env
+
+# AWS & Infrastructure
+.aws/
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Local IDEs & Kiro
+.vscode/
+.idea/
+.DS_Store
