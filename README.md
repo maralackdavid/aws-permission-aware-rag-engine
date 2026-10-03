@@ -47,6 +47,7 @@ Following the **PMI Certified Professional in Managing AI (CPMAI) Phase I (Busin
 
 *Overall Assessment*: **ALL GREEN (GO)** — Project approved for technical implementation.
 
+
 ---
 
 ## 2. Target System Architecture
@@ -103,6 +104,7 @@ graph TD
 
     %% Telemetry
     Orchestrator -.->|Log Token Spend & Latency| CloudWatch
+
 
 ---
 
