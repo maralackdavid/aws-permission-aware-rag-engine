@@ -161,3 +161,59 @@ This project follows the 6-phase **Cognitive Project Management for AI (CPMAI)**
 | **Phase IV: Model Development** | W7–W8 | Hybrid Retriever Lambda, Re-Ranker & System Prompts | OpenSearch hybrid queries returning rescored chunks. |
 | **Phase V: Model Evaluation** | W9–W10 | 100-Item Golden Dataset & CI/CD Quality Gate | **92.4% Precision** & **0 Security Leakage** in CI/CD. |
 | **Phase VI: Operationalization** | W11–W12 | CloudWatch/X-Ray Telemetry & Pilot Rollout | **P95 Latency < 1.38s** in production-simulated pilot. |
+
+graph TD
+    classDef critical fill:#ff9999,stroke:#990000,stroke-width:2px,color:#000;
+    classDef slack fill:#e1f5fe,stroke:#0288d1,stroke-width:1px,color:#000;
+    classDef gate fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#000;
+
+    subgraph Phase1 ["Phase I: Business Understanding (W1-W2)"]
+        M1["M1: CPMAI 3x3 Feasibility & ROI Model"]:::critical
+        S1["Agile Team Charter & Sprint Backlog"]:::slack
+        G1{"GATE 1: Go/No-Go Decision"}:::gate
+    end
+
+    subgraph Phase2 ["Phase II: Data Understanding (W3-W4)"]
+        M2["M2: S3 Corpus Hygiene Audit & RBAC Claims Mapping"]:::critical
+        G2{"GATE 2: Data Quality & Security Approval"}:::gate
+    end
+
+    subgraph Phase3 ["Phase III: Data Preparation (W5-W6)"]
+        M3A["M3A: Ingestion Lambda & Semantic Chunking"]:::critical
+        M3B["M3B: Titan Embeddings & OpenSearch RBAC Ingestion"]:::critical
+    end
+
+    subgraph Phase4 ["Phase IV: Model Development (W7-W8)"]
+        M4A["M4A: OpenSearch Hybrid Search & Security Filter"]:::critical
+        M4B["M4B: Cohere Re-Ranker & Versioned Prompt Config"]:::critical
+        S2["UI Agent Dashboard Integration Stub"]:::slack
+    end
+
+    subgraph Phase5 ["Phase V: Model Evaluation (W9-W10)"]
+        M5A["M5A: 100-Item Golden Test Dataset Curation"]:::critical
+        M5B["M5B: Ragas Offline Eval & CI/CD Regression Gate"]:::critical
+        G3{"GATE 3: Pre-Deployment SLA Verification"}:::gate
+    end
+
+    subgraph Phase6 ["Phase VI: Model Operationalization (W11-W12)"]
+        M6A["M6A: AWS X-Ray & CloudWatch Telemetry Instrumentation"]:::critical
+        M6B["M6B: Pilot Rollout & Human-in-the-Loop Escalation"]:::critical
+        G4{"GATE 4: Production SLA Sign-off"}:::gate
+    end
+
+    %% Dependencies
+    M1 --> G1
+    S1 --> G1
+    G1 -->|APPROVED| M2
+    M2 --> G2
+    G2 -->|APPROVED| M3A
+    M3A --> M3B
+    M3B --> M4A
+    M4A --> M4B
+    M4B --> M5A
+    S2 --> M5A
+    M5A --> M5B
+    M5B --> G3
+    G3 -->|PASSED| M6A
+    M6A --> M6B
+    M6B --> G4
