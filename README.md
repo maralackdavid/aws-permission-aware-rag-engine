@@ -104,7 +104,7 @@ graph TD
 
     %% Telemetry
     Orchestrator -.->|Log Token Spend & Latency| CloudWatch
-
+```
 
 ---
 
