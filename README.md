@@ -149,8 +149,6 @@ This project follows the 6-phase **Cognitive Project Management for AI (CPMAI)**
 * **Distributed Observability**: Instrumenting end-to-end trace subsegments via **AWS X-Ray** and custom **Amazon CloudWatch** token cost/latency metrics.
 * **Human-in-the-Loop Escalation**: Configured explicit model refusal behavior for low-confidence queries, routing ungrounded requests to human supervisors for review and dataset enrichment.
 
----
-
 ### 3.7 CPMAI Execution Roadmap & Gate Milestones
 
 | CPMAI Phase | Duration | Core Deliverables | Success Gate / Milestone |
