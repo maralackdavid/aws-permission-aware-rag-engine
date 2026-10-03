@@ -45,7 +45,6 @@ Following the **PMI Certified Professional in Managing AI (CPMAI) Phase I (Busin
 | | Implementation Timeline | 🟢 **GO** | Agile pilot deployment achievable in short 2-week iterations. |
 | | Operational Context | 🟢 **GO** | Embedded directly into support agent dashboard via REST API. |
 
-
 *Overall Assessment*: **ALL GREEN (GO)** — Project approved for technical implementation.
 
 ---
@@ -104,8 +103,15 @@ graph TD
 
     %% Telemetry
     Orchestrator -.->|Log Token Spend & Latency| CloudWatch
-3. CPMAI Critical Path Milestones Project Plan
-This project plan applies the Cognitive Project Management for AI (CPMAI) 6-phase framework. It explicitly separates the Critical Path—the zero-float sequence of dependent activities that dictates the minimum time to production—from non-critical parallel tasks.
+```
+
+---
+
+## 3. CPMAI Critical Path Milestones Project Plan
+
+This project plan applies the Cognitive Project Management for AI (CPMAI) 6-phase framework. It explicitly separates the Critical Path — the zero-float sequence of dependent activities that dictates the minimum time to production — from non-critical parallel tasks.
+
+```mermaid
 graph TD
     classDef critical fill:#ff9999,stroke:#990000,stroke-width:2px,color:#000;
     classDef slack fill:#e1f5fe,stroke:#0288d1,stroke-width:1px,color:#000;
@@ -161,3 +167,4 @@ graph TD
     G3 -->|PASSED| M6A
     M6A --> M6B
     M6B --> G4
+```
