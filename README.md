@@ -44,8 +44,8 @@ graph TD
 
 #### Phase II: Data Understanding & Security Mapping
 * **CPMAI Objective**: Analyze enterprise data characteristics, document structures, line-of-business ownership, and security constraints.
-* **Module 4 Security & Governance Integration**: Audit document repositories for Access Control Lists (ACLs), user role permissions, and compliance boundaries (HIPAA, SOC 2, ISO/IEC 42001).
-* **Module 5 Baseline Integration**: Capture pre-launch operational baselines ("A KPI without a baseline is an opinion; a KPI with a baseline is evidence"). Establish baseline manufacturing scrap rate at **3.2%** and baseline document search latency.
+* **Security & Governance Integration**: Audit document repositories for Access Control Lists (ACLs), user role permissions, and compliance boundaries (HIPAA, SOC 2, ISO/IEC 42001).
+* **Baseline Integration**: Capture pre-launch operational baselines ("A KPI without a baseline is an opinion; a KPI with a baseline is evidence"). Establish baseline manufacturing scrap rate at **3.2%** and baseline document search latency.
 * **Gate 2 Milestone**: Data Readiness, Privacy & Zero-Trust Security Approval.
 
 #### Phase III: Data Preparation & Vector Pipeline
@@ -55,7 +55,7 @@ graph TD
 
 #### Phase IV: Model Development & Cloud Architecture
 * **CPMAI Objective**: Construct the technical solution and select optimal build/buy/partner deployment paths.
-* **Module 4 TCO Analysis**: Conduct a 3-Year Build vs. Buy vs. Partner Total Cost of Ownership evaluation:
+* **TCO Analysis**: Conduct a 3-Year Build vs. Buy vs. Partner Total Cost of Ownership evaluation:
   * *Build In-House*: **$1,940,000 3-Year TCO** ($1.4M upfront + $180K/yr opex); 14-month delivery timeline risks missing market windows.
   * *Buy (Off-the-Shelf)*: $1.215M software license + $410K hidden throughput loss from standard model false positives = **$1,625,000 Adjusted TCO**.
   * *Partner (Systems Integrator)*: **$965,000 3-Year TCO** ($680K co-development + $95K/yr maintenance); achieves 5-month timeline, full domain co-training, and **100% enterprise IP ownership**.
@@ -64,7 +64,7 @@ graph TD
 #### Phase V: Model Evaluation & Financial Validation
 * **CPMAI Objective**: Rigorously test technical accuracy, security isolation, and financial viability against baseline goals.
 * **Technical SLA Benchmarks**: Evaluate retrieval precision (**92.4%** vs. >85% target), response latency (**1.38s P95**), citation coverage (**96.1%**), and zero-trust security compliance (**100% RBAC isolation**).
-* **Module 5 Comprehensive 4-Component Financial ROI Model**:
+* **Comprehensive 4-Component Financial ROI Model**:
   * *Direct Savings*: $890,000/yr scrap reduction + $210,000/yr manual QC labor reduction = **$1,100,000/yr**.
   * *Indirect Gains*: **$120,000/yr** in avoided customer complaint rework and expedited freight.
   * *Hidden Operating Costs*: **$223,000/yr** ($95K maintenance + $48K compute + $80K data science oversight).
@@ -74,8 +74,8 @@ graph TD
 
 #### Phase VI: Operationalization & Active Portfolio Governance
 * **CPMAI Objective**: Deploy into production, monitor operational health, and actively manage long-term portfolio scale.
-* **Module 4 Transition Strategy**: Execute a **Phased Rollout by Line/Site** with strict rollback triggers to limit operational blast radius.
-* **Module 5 Controls**: Track 4 **Leading Indicators** (94% User Adoption, 99.2% Pipeline Uptime, Executive Sponsor Engagement, 97.3% Model Accuracy Trajectory) and enforce FinOps controls (Bedrock provisioned throughput auto-scaling, 90-day artifact retention).
+* **Transition Strategy**: Execute a **Phased Rollout by Line/Site** with strict rollback triggers to limit operational blast radius.
+* **Controls**: Track 4 **Leading Indicators** (94% User Adoption, 99.2% Pipeline Uptime, Executive Sponsor Engagement, 97.3% Model Accuracy Trajectory) and enforce FinOps controls (Bedrock provisioned throughput auto-scaling, 90-day artifact retention).
 * **Gate 4 Milestone**: Active Portfolio Governance classification (*Scale*, *Pause*, or *Terminate*).
 
 ---
