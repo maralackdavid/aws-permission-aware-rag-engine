@@ -1,5 +1,5 @@
 # Enterprise AWS Permission-Aware RAG Engine & AI Business Strategy Portfolio
-> Unifying PMI-CPMAI Project Lifecycle, AWS AI Business Strategy, and Zero-Trust Enterprise RAG Architecture. This repository demonstrates the practical application of the **AWS Certified AI Business Strategist (AIB-C01)** and **PMI-CPMAI** frameworks for enterprise AI transformation, strategic alignment, and value demonstration.
+> **Zero-Trust Enterprise RAG Architecture**: This repository demonstrates the practical application of the **AWS Certified AI Business Strategist (AIB-C01)** and **PMI-CPMAI** frameworks for enterprise AI transformation, strategic alignment, and value demonstration.
 
 ---
 
