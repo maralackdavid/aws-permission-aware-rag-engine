@@ -15,7 +15,48 @@
 
 ---
 
-## 1. CPMAI 6-Phase Project Lifecycle & Strategic Alignment
+## 1. Strategic Alignment & Solution Selection
+
+### 1.1 Probabilistic vs. Deterministic Task Filtering (The 95% Rule)
+Before committing capital, every enterprise requirement is evaluated against structural task characteristics:
+* **Predictability**: Tasks with identical inputs yielding identical outputs belong in rules engines.
+* **The 95% Rule**: If a business rules engine or decision tree covers 95% of operational cases, build the rules engine. AI is deployed strictly when edge-case variability, unstructured text/vision, or contextual ambiguity renders static logic ineffective.
+
+### 1.2 3-Year Build vs. Buy vs. Partner TCO Model
+
+| Cost Element | Option A: Build In-House | Option B: Buy Off-the-Shelf | Option C: Partner (Recommended) |
+| :--- | :--- | :--- | :--- |
+| **Upfront / Co-Dev Cost** | $1,400,000 | $120,000 | $680,000 |
+| **Annual Operating Opex (3 Yrs)** | $540,000 ($180K/yr) | $1,095,000 ($365K/yr) | $285,000 ($95K/yr) |
+| **Hidden Throughput Loss** | $0 | $410,000 (9% false positives) | $0 (Custom domain model) |
+| **Total 3-Year TCO** | **$1,940,000** | **$1,625,000** (Adjusted) | **$965,000** |
+| **Time-to-Market** | 14 Months (Misses Q3) | 2 Months | 5 Months (Meets Q3) |
+| **Enterprise IP Ownership** | 100% Owned | Vendor Owned | **100% Contractually Retained** |
+
+### 1.3 Active Portfolio Governance
+Initiatives are classified into evidence-backed operational buckets:
+* **Scale**: Proven financial return, high adoption, strong data flywheel.
+* **Pause**: Temporarily suspended with strict 30/60-day condition criteria (e.g., awaiting data pipeline hygiene or sponsor re-alignment).
+* **Terminate**: Unpromising projects halted immediately, with remaining capital redeployed to high-performing initiatives.
+
+---
+
+## 2. Value Demonstration & Financial Governance
+
+### 2.1 Executive Stakeholder KPI Alignment Matrix
+
+| Executive Role | Key Performance Indicators (KPIs) | Strategic Focus & Value Deliverable |
+| :--- | :--- | :--- |
+| **CFO** | Net Annual Savings ($1.255M/yr), 2-Yr ROI (203%), Payback Period (~10 Mos) | EBITDA expansion, capital efficiency, defensible financial return |
+| **COO** | Scrap Rate (3.2% to 2.1%), OEE Lift, MTBF, Inspection Cycle Time | Operational throughput, quality defect elimination, plant productivity |
+| **CIO** | User Adoption (94%), Pipeline Uptime (99.2%), RBAC Isolation (100%) | System health, zero-trust security compliance, enterprise scalability |
+| **CHRO** | Capacity Recovered (52.5 hrs/wk), Employee Experience (eNPS) | Workforce augmentation, high-value task redeployment |
+
+### 2.2 Comprehensive Financial ROI Equation
+$$\text{Net Benefit} = (\text{Direct Savings} [\$1.10\text{M}] + \text{Indirect Gains} [\$120\text{K}] + \text{Productivity} [\$258\text{K}]) - \text{Operating Opex} [\$223\text{K}] = \mathbf{\$1,255,000/\text{year}}$$
+
+---
+## 3. CPMAI 6-Phase Project Lifecycle & Strategic Alignment
 
 Execution follows the **Cognitive Project Management for AI (CPMAI)** methodology, embedding Module 4 strategy and Module 5 value governance into each phase gate:
 
@@ -76,48 +117,6 @@ graph TD
 * **Transition Strategy**: Execute a **Phased Rollout by Line/Site** with strict rollback triggers to limit operational blast radius.
 * **Controls**: Track 4 **Leading Indicators** (94% User Adoption, 99.2% Pipeline Uptime, Executive Sponsor Engagement, 97.3% Model Accuracy Trajectory) and enforce FinOps controls (Bedrock provisioned throughput auto-scaling, 90-day artifact retention).
 * **Gate 4 Milestone**: Active Portfolio Governance classification (*Scale*, *Pause*, or *Terminate*).
-
----
-
-## 2. Strategic Alignment & Solution Selection
-
-### 2.1 Probabilistic vs. Deterministic Task Filtering (The 95% Rule)
-Before committing capital, every enterprise requirement is evaluated against structural task characteristics:
-* **Predictability**: Tasks with identical inputs yielding identical outputs belong in rules engines.
-* **The 95% Rule**: If a business rules engine or decision tree covers 95% of operational cases, build the rules engine. AI is deployed strictly when edge-case variability, unstructured text/vision, or contextual ambiguity renders static logic ineffective.
-
-### 2.2 3-Year Build vs. Buy vs. Partner TCO Model
-
-| Cost Element | Option A: Build In-House | Option B: Buy Off-the-Shelf | Option C: Partner (Recommended) |
-| :--- | :--- | :--- | :--- |
-| **Upfront / Co-Dev Cost** | $1,400,000 | $120,000 | $680,000 |
-| **Annual Operating Opex (3 Yrs)** | $540,000 ($180K/yr) | $1,095,000 ($365K/yr) | $285,000 ($95K/yr) |
-| **Hidden Throughput Loss** | $0 | $410,000 (9% false positives) | $0 (Custom domain model) |
-| **Total 3-Year TCO** | **$1,940,000** | **$1,625,000** (Adjusted) | **$965,000** |
-| **Time-to-Market** | 14 Months (Misses Q3) | 2 Months | 5 Months (Meets Q3) |
-| **Enterprise IP Ownership** | 100% Owned | Vendor Owned | **100% Contractually Retained** |
-
-### 2.3 Active Portfolio Governance
-Initiatives are classified into evidence-backed operational buckets:
-* **Scale**: Proven financial return, high adoption, strong data flywheel.
-* **Pause**: Temporarily suspended with strict 30/60-day condition criteria (e.g., awaiting data pipeline hygiene or sponsor re-alignment).
-* **Terminate**: Unpromising projects halted immediately, with remaining capital redeployed to high-performing initiatives.
-
----
-
-## 3. Value Demonstration & Financial Governance
-
-### 3.1 Executive Stakeholder KPI Alignment Matrix
-
-| Executive Role | Key Performance Indicators (KPIs) | Strategic Focus & Value Deliverable |
-| :--- | :--- | :--- |
-| **CFO** | Net Annual Savings ($1.255M/yr), 2-Yr ROI (203%), Payback Period (~10 Mos) | EBITDA expansion, capital efficiency, defensible financial return |
-| **COO** | Scrap Rate (3.2% to 2.1%), OEE Lift, MTBF, Inspection Cycle Time | Operational throughput, quality defect elimination, plant productivity |
-| **CIO** | User Adoption (94%), Pipeline Uptime (99.2%), RBAC Isolation (100%) | System health, zero-trust security compliance, enterprise scalability |
-| **CHRO** | Capacity Recovered (52.5 hrs/wk), Employee Experience (eNPS) | Workforce augmentation, high-value task redeployment |
-
-### 3.2 Comprehensive Financial ROI Equation
-$$\text{Net Benefit} = (\text{Direct Savings} [\$1.10\text{M}] + \text{Indirect Gains} [\$120\text{K}] + \text{Productivity} [\$258\text{K}]) - \text{Operating Opex} [\$223\text{K}] = \mathbf{\$1,255,000/\text{year}}$$
 
 ---
 
