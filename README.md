@@ -164,7 +164,7 @@ graph TD
 
 ---
 
-## 3. CPMAI Critical Path Milestones Project Plan
+## 5. CPMAI Critical Path Milestones Project Plan
 
 This project plan applies the **Cognitive Project Management for AI (CPMAI)** 6-phase framework. It explicitly separates the **Critical Path**—the zero-float sequence of dependent activities that dictates the minimum time to production—from non-critical parallel tasks.
 
@@ -226,7 +226,7 @@ graph TD
     M6B --> G4
 ```
 
-### 3.1 Critical Path Milestone Schedule & Gate Review Breakdown
+### 5.1 Critical Path Milestone Schedule & Gate Review Breakdown
 
 *Tasks marked **[CRITICAL]** directly impact the deployment completion date. Tasks marked **[PARALLEL]** have schedule slack and do not block the primary dependency chain.*
 
@@ -245,7 +245,7 @@ graph TD
 | **W11–W12**| **VI. Operationalization**| **M6A: Distributed Telemetry**<br/>Instrument AWS X-Ray subsegments and CloudWatch alarms for P95 latency and token spend. | **[CRITICAL]** | M5B | Real-time observability dashboard online. |
 | | | **M6B: Pilot Rollout & Escalation**<br/>Deploy pilot to Tier-1 support reps; establish low-confidence fallback to human supervisors. | **[CRITICAL]** | M6A | **Gate 4**: Final sign-off; AHT reduction verified in pilot. |
 
-### 3.2 Go/No-Go Decision Gates & SLA Thresholds
+### 5.2 Go/No-Go Decision Gates & SLA Thresholds
 
 1. **Gate 1: CPMAI Phase I Business & Technical Approval (End of W2)**
    * **Passing Rule**: Must pass all 9 CPMAI feasibility criteria across Business (problem clarity, ROI), Data (relevance, quality), and Execution (technology, timeline).
@@ -266,7 +266,7 @@ graph TD
 4. **Gate 4: Production Pilot Operationalization Sign-Off (End of W12)**
    * **Passing Rule**: AWS X-Ray telemetry confirms zero unhandled exceptions, and pilot reps achieve a demonstrated reduction in Average Handle Time without security violations.
 
-### 3.3 Critical Path Risk Management & Contingency Plan
+### 5.3 Critical Path Risk Management & Contingency Plan
 
 | Critical Path Risk | CPMAI Phase | Severity | Failure Trigger | Automated Mitigation & Contingency Strategy |
 | :--- | :---: | :---: | :--- | :--- |
@@ -277,23 +277,31 @@ graph TD
 
 ---
 
-## 4. Measured Evaluation Benchmarks
+## 6. Repository Structure
 
-Benchmarked using a 100-document golden test dataset and automated evaluation metrics:
-
-| Metric | Target SLA | Measured Benchmark | Status |
-| :--- | :--- | :--- | :--- |
-| **Retrieval Precision** | > 85% | **92.4%** | PASS |
-| **P95 Response Latency** | < 1.50s | **1.38s** | PASS |
-| **RBAC Security Compliance** | 100% | **100% (0 Unauthorized Leakage)** | PASS |
-| **Citation Coverage** | > 90% | **96.1%** | PASS |
-
----
-
-## 5. Repository Structure & Key Deliverables
-
-* [`docs/adrs/ADR-001-managed-vs-custom-rag.md`](./docs/adrs/ADR-001-managed-vs-custom-rag.md): Architecture Decision Record comparing Managed Bedrock Knowledge Bases vs Custom OpenSearch Serverless RAG.
-* [`src/lambda/retriever.py`](./src/lambda/retriever.py): Python orchestration logic for Bedrock API calls, OpenSearch hybrid queries, and Cohere re-ranking.
-* [`tests/eval_harness.py`](./tests/eval_harness.py): Automated evaluation harness and test datasets.
+```
+aws-permission-aware-rag-engine/
+├── docs/
+│   ├── business-case/          # Financial ROI & TCO Models (.xlsx / .md)
+│   ├── cpmai-framework/        # Phase Gate Checklists (Gates 1-4) & SLA Specifications
+│   └── architecture/           # CloudFormation/Terraform Architecture Diagrams & Security Specs
+├── src/
+│   ├── lambda/                 # Orchestrator & IAM RBAC Metadata Filtering Engine
+│   ├── opensearch/             # OpenSearch Serverless Index Schema & Security Policies
+│   └── evaluation/             # SageMaker Model Evaluation & Ragas Regression Harness
+├── cdk/                        # AWS CDK Infrastructure as Code (TypeScript)
+├── tests/                      # Automated RBAC Security & Retrieval Precision Tests
+└── README.md                   # Executive Portfolio & System Blueprint
+```
 
 ---
+
+## Author & Professional Background
+
+**David Maralack, PMP, PMI-CPMAI**  
+*Senior Technical Program Manager | Cloud & AI Strategy*  
+📍 Seattle, WA
+
+* **20+ Years Enterprise Tech Leadership**: Proven track record directing complex software/hardware programs across **Amazon** and **Microsoft** (Alexa, Kindle, Windows).
+* **3-Year Strategic AI & Architecture Focus**: Dedicated full-time investment in mastering advanced AI program management, earning **PMI-CPMAI** and **AWS Certified AI Business Strategist** credentials while engineering production cloud reference architectures.
+* **U.S. Patent Holder**: Patent #8,683,579 (Digital Licensing) & Patent #8,984,124 (Adaptive Data Monitoring).
